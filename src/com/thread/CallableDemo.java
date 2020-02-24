@@ -36,7 +36,8 @@ class MyThread2 implements Callable<Integer> {
         return 1024;
     }
 }
-
+//boolean isDone() 如果此任务完成，则返回true 。 完成可能是由于正常终止，
+//                  例外或取消 - 在所有这些情况下，此方法将返回true 。
 public class CallableDemo {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         FutureTask<Integer> futureTask = new FutureTask<>(new MyThread2());

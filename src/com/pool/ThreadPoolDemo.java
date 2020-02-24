@@ -26,6 +26,14 @@ import java.util.concurrent.Executors;
  *          底层队列用的是：new LinkedBlockingQueue<Runnable>()，而且此阻塞队列的大小为Integer.MAX_VALUE
  * static ExecutorService newSingleThreadExecutor() 创建一个Executor，它使用一个在无界队列中运行的工作线程。
  *          底层队列用的是：new LinkedBlockingQueue<Runnable>()，而且此阻塞队列的大小为Integer.MAX_VALUE
+ *
+ *
+ *     cpu密集型：cpu核数+1
+ *
+ *     io密集型： cpu核数/（1-阻塞系数）  阻塞系数一般0.8~0.9
+ *
+ *
+ *
  */
 public class ThreadPoolDemo {
     public static void main(String[] args) {

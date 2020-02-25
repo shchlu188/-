@@ -1,0 +1,109 @@
+串行回收器(Serial)
+    为单线程环境设计且使用一个线程进行垃圾回收，会暂停所有的用户线程，不适合服务器环境
+并行垃圾回收器(Parallel)
+    多个线程进行垃圾回收，此时用户线程时暂停的，适用于科学计算/大数据处理首台处理等弱交互环境
+并发垃圾回收器(CMS)
+    用户线程和垃圾线程同时执行(不一定是并行，可能交替执行)，不需要停顿用户线程，
+    互联网公司多用它，使用于对响应时间有要求的场景
+总结
+    Serial  VS  Parallel
+
+    Parallel 暂停的时间短
+
+STW(stop the world):停顿时间
+
+G1垃圾回收器
+    将堆内存分割成不同的区域然后并发的对其进行垃圾回收
+
+ZGC垃圾回收器
+
+GC垃圾回收器
+    思想：4大垃圾回收算法思想
+            引用、复制拷贝、标记清除、标记整理
+    实现：
+        串行回收、并行回收、并发回收、G1回收
+
+    查看默认垃圾回收器： java -XX:+PrintCommandLineFlags -version
+
+    java的gc回收类型主要：
+
+        UseSerialGC
+        UseParallelGC
+        UseConcMarkSweepGC(CMS)
+        UseParNewGC
+        UseParallelOldGC
+        UseG1GC
+
+
+
+Young Gen
+    Serial Copying
+    Parallel Scavenge
+    ParNew
+-----------------------------------------------G1
+Old Gen
+    Serial MSC(Serial Old)<已经遗弃>
+    Parallel Compaction(Parallel Old)
+    CMS
+
+
+DefNew ---- Default New Generation
+
+Tenured ---- Old
+
+ParNew ---- Parallel New Generation
+
+PSYoungGen ---- Parallel Scavenge
+
+ParOldGen ---- Parallel Old Generation
+
+
+server/client
+
+            新生代:(-Xms10m -Xmx10 -XX:+PrintGCDetails -XX:+PrintCommandLineFlags )
+                串行收集器GC(Serial)/(Serial Copying)：1:1
+                        最古老、最稳定、效率高；STW较长；
+                    -XX:+UseSerialGC
+                并行GC(ParNew) N:1
+                    -XX:+UseParNewGC
+
+                并行回收GC(Parallel)/(Parallel Scavenge) N:N
+                    -XX:+UseParallelGC(-XX:+UseParallelOldGC)
+            老年代
+                串行GC(Serial Old)/(Serial MSC)
+
+                并行GC(Parallel Old)/(Parallel MSC)
+                    -XX:+UseParallelOldGC
+
+                并发标记清除GC(CMS)
+                    -XX:+UseConcMarkSweepGC
+                    四步：
+                        初始标记(CMS Initial mark)
+                            只是标记一下GC Roots能直接关联的对象，速度很快，但任需要暂停所有的工作线程
+                        并发标记(CMS concurrent mark)
+                            进行GC Roots跟踪的过程，和用户线程一起工作，不需要暂停工作线程。主要标记过程，标记全部对象
+                        重新标记(CMS remark)
+                            为了修正在并发标记期间，因用户程序继续运行而导致标记产生变动的那一部分对象的标记记录，仍需要暂停所有的工作线程
+                            由于并发标记时，用户线程依然运行，因此在正式清理前，再做修改
+                        并发清除(CMS concurrent sweep)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

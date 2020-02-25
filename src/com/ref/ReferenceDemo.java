@@ -1,5 +1,7 @@
 package com.ref;
 
+import java.lang.ref.PhantomReference;
+import java.lang.ref.ReferenceQueue;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 
@@ -8,7 +10,9 @@ import java.lang.ref.WeakReference;
  *
  * @author: chenglu
  * Date: 2020/2/24
- * Description: java引用
+ * Description: public abstract class Reference<T> extends Object
+ *      子类
+ *          PhantomReference ， SoftReference ， WeakReference
  *      强引用：
  *
  *      软引用：由垃圾收集器根据内存需求自行决定清除。 软引用通常用于实现对内存敏感的缓存。
@@ -57,18 +61,44 @@ class SoftReferenceDemo{
 }
 public class ReferenceDemo {
     public static void main(String[] args){
+        plantomRef();
     }
+
+    private static void plantomRef() {
+        Object obj = new Object();
+        ReferenceQueue<Object> referenceQueue = new ReferenceQueue<>();
+        PhantomReference<Object> phantomReference = new PhantomReference<Object>(obj,referenceQueue);
+
+        System.out.println(obj);
+        System.out.println(phantomReference.get());
+        System.out.println(referenceQueue.poll());
+        obj = null;
+        System.gc();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("-------gc after--------");
+        System.out.println(obj);
+        System.out.println(phantomReference.get());
+        System.out.println(referenceQueue.poll());
+    }
+
     // 弱引用
     private static void weakRef() {
         Object obj = new Object();
-        WeakReference<Object> weakReference = new WeakReference<>(obj);
+        ReferenceQueue<Object> referenceQueue = new ReferenceQueue<>();
+        WeakReference<Object> weakReference = new WeakReference<>(obj,referenceQueue);
         System.out.println(obj);
         System.out.println(weakReference.get());
+        System.out.println(referenceQueue.poll());
         obj = null;
         System.gc();
         System.out.println("-------------");
         System.out.println(obj);
         System.out.println(weakReference.get());
+        System.out.println(referenceQueue.poll());
     }
 
     // 强引用

@@ -1,0 +1,13 @@
+            IO                              NIO
+    面向流(Stream Oriented)             面向缓冲区(Buffer Oriented)
+    阻塞IO(Blocking IO)                 非阻塞IO(Non Blocking IO)
+        无                              选择器(Selectors)
+
+
+NIO的核心:
+    通道(channel)
+
+    缓冲区(Buffer)
+        一个由于特定基本数据类型的容器
+
+

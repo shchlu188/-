@@ -70,7 +70,7 @@ package com.jvm;
  *             -XX:+PrintGCDetails: 打印GC详细信息  === -Xlog:gc*
  *             -XX:SurvivorRatio 设置新生代中eden和s0/s1空间的比列,默认为 -XX:SurvivorRatio=8, Eden:S0:S1=8:1:1
  *             -XX:NewRatio 配置新生代和老年代在堆结构的占比，默认 -XX:NewRatio=2 new:old=1:2,年轻代占堆内存的1/3
- *             -XX:MaxTenuringThreshold
+ *             -XX:MaxTenuringThreshold 设置分代年龄
  *             -XX:MetaspaceSize 设置元空间大小
  *             -XX:+PrintFlagsInitial 主要查看初始默认 （java -XX:+PrintFlagsInitial）
  *             -XX:+PrintFlagsFinal 主要查看修改更新 （java -XX:+PrintFlagsFinal -version）

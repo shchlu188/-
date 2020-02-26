@@ -71,7 +71,8 @@ server/client
                     -XX:+UseParallelGC(-XX:+UseParallelOldGC)
             老年代
                 串行GC(Serial Old)/(Serial MSC)
-
+                    标记-整理
+                    -XX:+UseSerialOldGC
                 并行GC(Parallel Old)/(Parallel MSC)
                     -XX:+UseParallelOldGC
 
@@ -86,6 +87,52 @@ server/client
                             为了修正在并发标记期间，因用户程序继续运行而导致标记产生变动的那一部分对象的标记记录，仍需要暂停所有的工作线程
                             由于并发标记时，用户线程依然运行，因此在正式清理前，再做修改
                         并发清除(CMS concurrent sweep)
+                            和用户线程一起工作，不需要暂停工作线程
+
+                    优点： 并发收集，停顿低
+                    缺点：并发执行，对cpu资源压力大；会产生大量空间碎片
+
+            关联
+                  new                   old
+                Serial              Serial Old
+                ParNew              CMS->Serial Old
+                Parallel Scavenge   Serial Old
+                Parallel Scavenge   Parallel Old
+
+
+            组合选择：
+                单cpu或小内存，单机程序
+                    -XX:+UseSerialGC
+                多cpu，需要大吞吐量，如后台计算型应用
+                    -XX:+UseParallelGC 或者 -XX:+UseParallelOldGC
+                多cpu，追求低停顿时间。需要快速响应如互联网应用
+                    -XX:+UseConcMarkSweep / -XX:+ParNewGC
+G1垃圾回收器
+    Region区域化垃圾收集器: 化整为零，避免全内存扫描，只需要按照区域来进行扫描即可
+
+    步骤：
+        初始标记   只标记GC Roots 能直接关联到的对象
+        并发标记   进行GC Roots Tracing的过程
+        最终标记   修正在并发标记期间，因用户程序运行而导致标记产生变动的那一部分对象
+        筛选回收   根据时间来进行价值最大化的回收
+
+    常用参数
+        -XX:+UseG1GC
+        -XX:+G1HeapRegion=n 设置G1区域的大小,值为2的幂，范围在2-32m
+        -XX:MaxGCPauseMills=n 最大GC停顿时间
+        -XX:InitiatingHeapOccupancyPercent=n
+        -XX:ConcGCThreads=n
+        -XX:G1ReservePercent=n
+
+JVMGC--->springboot
+    java -server -Xms1024m -Xmx1024m -XX:+UseG1GC -jar 项目名
+
+
+linux
+    整机: top
+        uptime(精简版)
+    cpu：vmstat
+
 
 
 

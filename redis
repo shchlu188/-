@@ -1,1 +1,75 @@
-<mxfile host="app.diagrams.net" modified="2020-04-21T11:51:56.166Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" version="13.0.0" etag="6nQAZwLKn23wHcvXSuRL" type="github"><diagram id="v60JbPYULpJWccI9GQzX">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-04-22T00:38:55.825Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" etag="9lEK5DzZ5jmaCxidE6aS" version="13.0.0" type="github">
+  <diagram id="v60JbPYULpJWccI9GQzX" name="第 1 页">
+    <mxGraphModel dx="599" dy="317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-5" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="380" y="300" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-6" value="&lt;span style=&quot;font-family: &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;hiragino sans gb w3&amp;#34; , &amp;#34;microsoft yahei ui&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , sans-serif ; font-size: 13px ; text-align: left&quot;&gt;Slave&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="450" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-7" value="&lt;span style=&quot;font-family: &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;hiragino sans gb w3&amp;#34; , &amp;#34;microsoft yahei ui&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , sans-serif ; font-size: 13px ; text-align: left&quot;&gt;Slave&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="450" y="380" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="PLsVtQoyxcL_tQWk6JvV-8" target="PLsVtQoyxcL_tQWk6JvV-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="PLsVtQoyxcL_tQWk6JvV-8" target="PLsVtQoyxcL_tQWk6JvV-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-8" value="Master" style="whiteSpace=wrap;html=1;aspect=fixed;gradientColor=#ea6b66;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="390" y="350" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-9" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="380" y="460" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-10" value="&lt;span style=&quot;font-family: &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;hiragino sans gb w3&amp;#34; , &amp;#34;microsoft yahei ui&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , sans-serif ; font-size: 13px ; text-align: left&quot;&gt;Slave&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="450" y="480" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-11" value="&#xa;&#xa;&lt;!--StartFragment--&gt;&lt;span style=&quot;font-family: &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, &amp;quot;Hiragino Sans GB&amp;quot;, &amp;quot;Hiragino Sans GB W3&amp;quot;, &amp;quot;Microsoft YaHei UI&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Slave&lt;/span&gt;&lt;!--EndFragment--&gt;&#xa;&#xa;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="450" y="540" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-12" value="Master" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" vertex="1" parent="1">
+          <mxGeometry x="390" y="510" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PLsVtQoyxcL_tQWk6JvV-15" target="PLsVtQoyxcL_tQWk6JvV-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PLsVtQoyxcL_tQWk6JvV-15" target="PLsVtQoyxcL_tQWk6JvV-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-15" value="缓存" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="230" y="430" width="30" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PLsVtQoyxcL_tQWk6JvV-18" target="PLsVtQoyxcL_tQWk6JvV-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-18" value="DAL" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="130" y="425" width="40" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="PLsVtQoyxcL_tQWk6JvV-20" target="PLsVtQoyxcL_tQWk6JvV-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-20" value="APP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="430" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-22" value="MySQL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="300" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PLsVtQoyxcL_tQWk6JvV-23" value="MySQL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="460" width="40" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
